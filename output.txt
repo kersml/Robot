@@ -1,0 +1,11 @@
+Enter robots name: Tim
+Welcome, my name is tim, I'm a friendly robot
+Enter Command: heal
+Thanks for healing my wounds.
+Enter Command: jump
+Oh no a hazard, I'm jumping over it.
+Enter Command: pickup
+Oh treasure, picking it up!
+Enter Command: quit
+Goodbye
+
