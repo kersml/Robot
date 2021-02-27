@@ -1,22 +1,22 @@
 package commanddesignpattern;
 
 /**
- * Fire Command implements the Command Interface
+ * Fire Command simulates the process of a robot firing its weapon.
  */
 public class FireCommand implements Command {
 	private Robot robot;
 
 	/**
-	 * Constructor
+	 * Parameterized Constructor that creates an instance of a FireCommand.
 	 * 
-	 * @param robot is passed through constructor
+	 * @param robot which will perform the command.
 	 */
 	public FireCommand(Robot robot) {
 		this.robot = robot;
 	}
 
 	/**
-	 * this method executes the fire function.
+	 * Executes the stored robot's equivalent function.
 	 */
 	public void execute() {
 		robot.fire();

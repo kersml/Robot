@@ -1,10 +1,10 @@
 package commanddesignpattern;
 /**
- * This is a interface for the Command
+ * The Interface that mimics the role of a Command.
  */
 public interface Command {
 	/**
-	 * The void execute method for all of the commands
+	 * The execute method required by all class or interfaces that inherit from this interface.
 	 */
 	public void execute();
 }

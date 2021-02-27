@@ -3,44 +3,42 @@ package commanddesignpattern;
 import java.util.HashMap;
 
 /**
- * input handling class that uses a hashmap to select command
+ * Input handling class that uses a HashMap to store and select commands.
  * 
- * @author miller
+ * @author Miller
  */
 public class InputHandler {
 	public HashMap<String, Command> commands = new HashMap<>();
 
 	/**
-	 * constructor that creates and fills the hashmap with commands
+	 * Parameterized Constructor for creating an instance of the InputHandler.
 	 * 
-	 * @param robot object
+	 * @param robot which will be performing the commands.
 	 */
 	public InputHandler(Robot robot) {
-		PickupCommand pc = new PickUpCommand(robot);
-		HealCommand hc = new HealCommand(robot);
-		JumpCommand jc = new JumpCommand(robot);
-		FireCommand fc = new FireCommand(robot);
-		commands.put("pickup", pc);
-		commands.put("jump", jc);
-		commands.put("fire", fc);
-		commands.put("heal", hc);
+		commands.put("pickup", new PickupCommand(robot));
+		commands.put("jump", new JumpCommand(robot));
+		commands.put("fire", new FireCommand(robot));
+		commands.put("heal", new HealCommand(robot));
 	}
 
 	/**
-	 * method that accepts the input and chooses what to do
+	 * This method accepts user input data and determines which command 
+	 * from the HashMap to perform.
 	 * 
-	 * @param data entered
+	 * Also allows the user to quit the program.
+	 * 
+	 * @param data the user entered.
 	 */
 	public void inputEntered(String data) {
 		if (commands.containsKey(data)) {
 			Command temp = commands.get(data);
 			temp.execute();
 		} else if (data.equalsIgnoreCase("quit")) {
-			System.out.println("Goodbye");
+			System.out.println("Goodbye.");
 			System.exit(0);
 		} else {
-			System.out.println("Error");
-			System.exit(0);
+			System.out.println("Please enter a valid command.");
 		}
 	}
 }

@@ -1,22 +1,22 @@
 package commanddesignpattern;
 
 /**
- * Jump Command implements the Command Interface
+ * Jump Command simulates the process of a robot jumping.
  */
 public class JumpCommand implements Command {
 	private Robot robot;
 
 	/**
-	 * Constructor
+	 * Parameterized Constructor that creates an instance of a JumpCommand.
 	 * 
-	 * @param robot is passed through constructor
+	 * @param robot which will perform the command.
 	 */
 	public JumpCommand(Robot robot) {
 		this.robot = robot;
 	}
 
 	/**
-	 * this method executes the jump function.
+	 * Executes the stored robot's equivalent function.
 	 */
 	public void execute() {
 		robot.jump();
