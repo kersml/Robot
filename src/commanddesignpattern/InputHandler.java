@@ -38,7 +38,7 @@ public class InputHandler {
 			System.out.println("Goodbye.");
 			System.exit(0);
 		} else {
-			System.out.println("Please enter a valid command.");
+			System.out.println("Please enter a valid command.\n");
 		}
 	}
 }
