@@ -4,11 +4,11 @@ public class HealCommand implements Command{
 	
 	public HealCommand(Robot robot)
 	{
-		this.heal = heal;
+		this.robot = robot;
 	}
 	public void execute()
 	{
-		//robot();
+		robot.heal();
 	}
 
 }

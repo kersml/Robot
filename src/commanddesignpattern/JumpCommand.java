@@ -4,11 +4,11 @@ public class JumpCommand implements Command{
 	
 	public JumpCommand(Robot robot)
 	{
-		this.jump = jump;
+		this.robot = robot;
 	}
 	public void execute()
 	{
-		//robot();
+		robot.jump();
 	}
 
 }

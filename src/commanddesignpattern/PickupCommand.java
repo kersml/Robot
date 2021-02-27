@@ -1,15 +1,15 @@
-package commanddesignpattern;
+//package commanddesignpattern;
 
 public class PickupCommand implements Command{
 	private Robot robot;
 	
 	public PickupCommand(Robot robot)
 	{
-		this.pickup = pickup;
+		this.robot = robot;
 	}
 	public void execute()
 	{
-		//robot();
+		robot.pickup();
 	}
 
 }

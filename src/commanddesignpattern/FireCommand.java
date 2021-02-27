@@ -4,11 +4,11 @@ public class FireCommand implements Command{
 	
 	public FireCommand(Robot robot)
 	{
-		this.fire = fire;
+		this.robot = robot;
 	}
 	public void execute()
 	{
-		//robot();
+		robot.fire();
 	}
 
 }
