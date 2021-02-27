@@ -1,13 +1,24 @@
 package commanddesignpattern;
-public class JumpCommand implements Command{
+
+/**
+ * Jump Command implements the Command Interface
+ */
+public class JumpCommand implements Command {
 	private Robot robot;
-	
-	public JumpCommand(Robot robot)
-	{
+
+	/**
+	 * Constructor
+	 * 
+	 * @param robot is passed through constructor
+	 */
+	public JumpCommand(Robot robot) {
 		this.robot = robot;
 	}
-	public void execute()
-	{
+
+	/**
+	 * this method executes the jump function.
+	 */
+	public void execute() {
 		robot.jump();
 	}
 

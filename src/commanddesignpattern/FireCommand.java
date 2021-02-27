@@ -1,13 +1,24 @@
 package commanddesignpattern;
-public class FireCommand implements Command{
+
+/**
+ * Fire Command implements the Command Interface
+ */
+public class FireCommand implements Command {
 	private Robot robot;
-	
-	public FireCommand(Robot robot)
-	{
+
+	/**
+	 * Constructor
+	 * 
+	 * @param robot is passed through constructor
+	 */
+	public FireCommand(Robot robot) {
 		this.robot = robot;
 	}
-	public void execute()
-	{
+
+	/**
+	 * this method executes the fire function.
+	 */
+	public void execute() {
 		robot.fire();
 	}
 
